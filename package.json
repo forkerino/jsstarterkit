@@ -4,7 +4,10 @@
   "description": "JS Starter Kit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "babel-node buildscripts/startMessage",
+    "start": "npm-run-all --parallel security-check open:src",
+    "security-check": "nsp check",
+    "open:src": "babel-node buildscripts/srcServer"
   },
   "repository": {
     "type": "git",
