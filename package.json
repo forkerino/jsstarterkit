@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node buildscripts/startMessage",
-    "start": "npm-run-all --parallel security-check open:src",
+    "start": "npm-run-all --parallel security-check open:src lint:watch",
     "security-check": "nsp check",
     "open:src": "babel-node buildscripts/srcServer",
     "lint": "esw webpack.config.* src buildScripts --color",
