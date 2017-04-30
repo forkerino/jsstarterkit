@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node buildscripts/startMessage",
-    "start": "npm-run-all --parallel security-check open:src lint:watch",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
     "security-check": "nsp check",
     "open:src": "babel-node buildscripts/srcServer",
-    "lint": "esw webpack.config.* src buildScripts --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint": "esw webpack.config.* src buildscripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress buildscripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
