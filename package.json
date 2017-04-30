@@ -7,7 +7,9 @@
     "prestart": "babel-node buildscripts/startMessage",
     "start": "npm-run-all --parallel security-check open:src",
     "security-check": "nsp check",
-    "open:src": "babel-node buildscripts/srcServer"
+    "open:src": "babel-node buildscripts/srcServer",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",
