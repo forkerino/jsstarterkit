@@ -28,7 +28,7 @@ getUsers().then(result => {
         };
     });
 }).catch((err)=>{
-    console.log(err); //eslint-disable no-console
+    console.log(err); //eslint-disable-line no-console
 });
 
     

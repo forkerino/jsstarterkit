@@ -19,7 +19,13 @@ app.get('/', function(req, res){
 });
 
 app.get('/users', function(req, res){
-    res.json({"users":[{"id":16616451,"firstName":"Vilma","lastName":"Cummerata","email":"Bartholome72@yahoo.com"},{"id":99442990,"firstName":"Lavinia","lastName":"Powlowski","email":"Josephine76@gmail.com"},{"id":60866635,"firstName":"Carleton","lastName":"Cormier","email":"Bart75@hotmail.com"},{"id":96282023,"firstName":"Brody","lastName":"Cole","email":"Nicklaus51@hotmail.com"},{"id":18134034,"firstName":"Felix","lastName":"Yundt","email":"Adriana_Trantow97@yahoo.com"}]});
+    res.json([
+        {"id":16616451,"firstName":"Vilma","lastName":"Cummerata","email":"Bartholome72@yahoo.com"},
+        {"id":99442990,"firstName":"Lavinia","lastName":"Powlowski","email":"Josephine76@gmail.com"},
+        {"id":60866635,"firstName":"Carleton","lastName":"Cormier","email":"Bart75@hotmail.com"},
+        {"id":96282023,"firstName":"Brody","lastName":"Cole","email":"Nicklaus51@hotmail.com"},
+        {"id":18134034,"firstName":"Felix","lastName":"Yundt","email":"Adriana_Trantow97@yahoo.com"}
+        ]);
 });
 
 app.listen(port,function(err){
